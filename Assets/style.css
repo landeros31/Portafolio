@@ -72,3 +72,138 @@ flex-direction: column;
   border-radius: 114px;
 
 }
+/*//////////////////////sobre mi////////////////////////////*/
+#about{
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+}
+.container-right-about{
+  width: 50vw;
+  height: 100vh;
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-left-about{
+  width: 50vw;
+  height: 100vh;
+  background-color: blue;
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.education{
+  width: 577px;
+height: 402px;
+background: #0D0D0D;
+border-radius: 20px;
+}
+.button-about{
+
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+}
+.button1{
+width: 71px;
+height: 20px;
+background: #0073E5;
+border-radius: 20px;
+}
+p{
+  color: white;
+}
+/*/////////////////////PRoyectos/////////////////////////////////*/
+#my-proyects{
+  background-color: teal;
+  width: 100vw;
+  
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.container-proyect{
+background-color:white;
+width: 1256px;
+height: 771px;
+border-radius: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+}
+
+.container-proyect2{
+  background-color:white;
+  width: 1256px;
+  height: 771px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+  }
+.container-information-proyect{
+  width: 50vw;
+  height: 100%;
+ 
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.description-proyect{
+  color: black;
+}
+.button-proyect{
+width: 218px;
+height: 58px;
+background: #0073E5;
+border-radius: 20px;
+color: white;
+}
+.container-right-proyect{
+  width: 50vw;
+  height: 100%;
+ 
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.container-img-proyect{
+  width: 500px;
+height: 507px;
+background: #0D0D0D;
+border-radius: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+/*/////////////////////Contacto/////////////////////////////////*/
+#contact{
+  margin-top: 20px;
+  background-color: brown;
+  width: 100vw;
+  height: 100vh;
+  display :flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.tittle-contact{
+width: 50%;
+}
+.container-form{
+width: 50%;
+}
