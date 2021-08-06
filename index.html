@@ -5,16 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./Assets/style.css">
+  <script src="https://kit.fontawesome.com/513d879ab2.js" crossorigin="anonymous"></script>
   <title>Sebastian Landeros</title>
 </head>
 <body>
 <!-- inicio del header-------------------------------------------- -->
   <header>
-   <div class="container-logo"> <img src="" alt="logo"></div>
+   <div class="container-logo"> 
+     <img class="img-logo"src="./Assets/img/Component 2.png" alt="logo"></div>
+   <button class=hamburguer><i class="fas fa-bars"></i></button>
+   
+
    <nav class="container-list">
-     <ul>
-       <li id="list"><a href="#">INICIO</a></li>
-       <li id="list"><a href="#">SOBRE MI</a></li>
+     <ul class="ul-list" id="ul-list">
+       <li id="list"><a href="#inicio">INICIO</a></li>
+       <li id="list"><a href="#about">SOBRE MI</a></li>
        <li id="list"><a href="#">PROYECTOS</a></li>
        <li id="list"><a href="#">CONTACTO</a></li>
      </ul>
@@ -28,17 +33,35 @@
           <h1>Sebastian Landeros</h1>
        </div>
        <div class="description" >
-           <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse expedita inventore porro assumenda dolorem atque quae minus dolores, doloremque excepturi blanditiis odio iure asperiores maiores maxime, incidunt in, fuga soluta?</h3>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse expedita inventore porro assumenda dolorem atque quae minus dolores, doloremque excepturi blanditiis odio iure asperiores maiores maxime, incidunt in, fuga soluta?</p>
        </div>
     </div>
     <div class="container-left">
         <div class="photo">
-            <h2>mi foto mia aqui</h2>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/000/554/339/small/sunglasses_006.jpg" alt="mi-foto">
         </div>
         <div class="location">
-         <p><img src="" alt="location">Bogota.Colombia</p>
-         <p><img src="" alt="linkedin">Sebastian Landeros</p>
-         <p><img src="" alt="Email">sebastianlanderos1@gmail.com</p>
+            <div class="ubicar-logo">
+              <div class="logo-location">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <p>Bogota.Colombia</p>
+            </div>
+
+            <div class="ubicar-logo">
+              <div class="logo-location">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <p>Sebastian Landeros</p>
+            </div>
+
+            <div class="ubicar-logo">
+              <div class="logo-location">
+                <i class="fab fa-github-square"></i>
+              </div>
+              <p>landeros31</p>
+            </div>
+
         </div>
     </div>
    </section>
@@ -50,17 +73,56 @@
          <h2 id="tittle-about-education">Estudios</h2>
         </div>
         <div class="education">
-          <div>
-            <p><img src="" alt="calendar">Universidad ECCI . Bogota Colombia 
-            <p><img src="" alt="calendar">2020</p>  
+
+          <div class="contenedor-formacion">
+            <p>Universidad ECCI . Bogota Colombia  </p> 
+            <div class="ubicar-logo-calendar">
+             <div class="logo-calendar">
+              <i class="far fa-calendar-alt"></i>
+             </div>
+             <p>2020</p>
+            </div>
             <p>Ingeniero Mecatrónico</p> 
 
           </div>
-          <div>
-            <p><img src="" alt="calendar">Universidad ECCI . Bogota Colombia 
-              <p><img src="" alt="calendar">2020</p>  
-              <p>Ingeniero Mecatrónico</p> 
+        
+          <div class="contenedor-formacion">
+            <p>Educamas-Programate . Bogota Colombia </p>
+            <div class="ubicar-logo-calendar">
+             <div class="logo-calendar">
+              <i class="far fa-calendar-alt"></i>
+             </div>
+             <p>2021</p>
+            </div>
+            <p>Desarrollador Full Stack</p> 
+
           </div>
+
+          <div class="contenedor-formacion2">
+            <p>Educamas-Programate . Bogota Colombia </p>
+            <div class="ubicar-logo-calendar">
+             <div class="logo-calendar">
+              <i class="far fa-calendar-alt"></i>
+             </div>
+             <p>2021</p>
+            </div>
+            <p>Desarrollador Full Stack</p> 
+
+          </div>
+
+          <div class="contenedor-formacion2">
+            <p>Educamas-Programate . Bogota Colombia </p>
+            <div class="ubicar-logo-calendar">
+             <div class="logo-calendar">
+              <i class="far fa-calendar-alt"></i>
+             </div>
+             <p>2021</p>
+            </div>
+            <p>Desarrollador Full Stack</p> 
+
+          </div>
+
+
           <div class="button-about">
             <button class="button1"></button>
             <button class="button1"></button>
@@ -69,21 +131,21 @@
      </div>
      <div class="container-right-about">
         <div class="skills">
-          <div>
-            <h2 id="tittle-about-skills">Habilidades</h2>
+          <div class="container-tittle-skills">
+            <h2 >Habilidades</h2>
           </div>
           <div class="container-img-logos">
-            <div>
-              <img src="" alt="react">
+            <div class="tamaño-iconos">
+              <i id="react" class="fab fa-react"></i>
             </div>
-            <div>
-             <img src="" alt="Java">
-             <img src="" alt="Angular">
+            <div class="tamaño-iconos">
+              <i id="java" class="fab fa-java"></i>
+             <i id="angular" class="fab fa-angular"></i>
             </div>
-            <div>
-              <img src="" alt="JavaScript">
-              <img src="" alt="python">
-              <img src="" alt="Laravel">
+            <div class="tamaño-iconos">
+              <i id="js" class="fab fa-js-square"></i>
+              <i id="python" class="fab fa-python"></i>
+              <i  id="laravel" class="fab fa-laravel"></i>
             </div>
 
           </div>
@@ -94,7 +156,7 @@
 <!-- inicio seccion 3 o mis proyectos------------------------------- -->
    <section id="my-proyects">
      <div class="tittle-proyects">
-       <h2 id="tittle-about-skills">Mis Proyectos</h2>
+       <h2 > Proyectos</h2>
      </div>
 <!------ -----cuadro usado para agregar  proyecto1--------------------- -->
       <div class="container-proyect">
@@ -102,7 +164,7 @@
             <h3>TITULO AQUI</h3>
             <p class="description-proyect">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, lorem ut enim nec, sed eu sapien natoque quis. Purus faucibus tellus placerat feugiat. Arcu, urna facilisis felis, id est, ut sed nisi. Eu, sed erat mollis risus ac donec.</p>
             <div class="show-proyect">
-              <button class="button-proyect">VISUZALIZAR</button>
+              <button class="button-proyect">VISUALIZAR</button>
               <a href="">VER EN GITHUB</a>
             </div>
           </div>
@@ -114,42 +176,48 @@
       </div>
 <!-- fin de cuadro que agrega proyecto --------------------------->
 <!-- cuadro usado para agregar proyecto 2---------------------- -->
-        <div class="container-proyect2">
-          <div class=container-information-proyect>
-            <h3>TITULO AQUI</h3>
-            <p class="description-proyect">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, lorem ut enim nec, sed eu sapien natoque quis. Purus faucibus tellus placerat feugiat. Arcu, urna facilisis felis, id est, ut sed nisi. Eu, sed erat mollis risus ac donec.</p>
-            <div class="show-proyect">
-              <button class="button-proyect">VISUZALIZAR</button>
-              <a href="">VER EN GITHUB</a>
+            <div class="container-proyect2">
+              <div class=container-information-proyect2>
+                <h3>TITULO AQUI</h3>
+                <p class="description-proyect">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, lorem ut enim nec, sed eu sapien natoque quis. Purus faucibus tellus placerat feugiat. Arcu, urna facilisis felis, id est, ut sed nisi. Eu, sed erat mollis risus ac donec.</p>
+                <div class="show-proyect">
+                  <button class="button-proyect">VISUALIZAR</button>
+                  <a href="">VER EN GITHUB</a>
+                </div>
+              </div>
+              <div class="container-right-proyect">
+                <div class="container-img-proyect">
+                        <img src="" alt="proyect1">
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="container-right-proyect">
-            <div class="container-img-proyect">
-                    <img src="" alt="proyect1">
-            </div>
-          </div>
-        </div>
 <!-- fin de cuadro que agrega proyecto 2--------------------------->
    </section>
  <!-- fin de secccion 3--------------------------------------- -->
 <!-- inicio de secccion 4 o cobtacto--------------------------------------- -->
 <section id="contact"> 
       <div class="tittle-contact">
-        <h2 id="tittle-about-skills">Mis Proyectos</h2>
+        <h2 >Contacto</h2>
       </div>
       <div class= "container-form">
         <h4>Lorem ipsum dolor sit amet, ijdnf consectetur adipiscing elit.?</h4>
         <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi pharetra, ac arcu, vivamus neque. Duis orci sem id risus pellenteempus, gravida urna velit dolor. Eget et sed diam molestie amet cras nam ultricies.</h5>
 
-        <form action="">
-        <input type="text" name="name" id="name" placeholder="nombre">
-        <input type="text" name="last name" id="last name" placeholder="apellido">
-        <input type="email" name="email" id="email" placeholder="correo electronico">
-        <input type="text" name="" id="" placeholder="mensaje">
-        <input type="submit" value="">
+        <form class="form" action="">
+          <div class="names">
+        <input type="text" name="name" id="name" placeholder="Nombre" >
+        <input type="text" name="last name" id="last-name" placeholder="Apellido">
+        </div>
+        <input type="email" name="email" id="email" placeholder="Correo electronico">
+        <input type="text" name="mensaje" id="message" placeholder="Mensaje">
+        <input type="submit" value="Enviar ->" id="enviar" >
         </form>
       </div>
 </section>
    <!-- fin de secccion 4--------------------------------------- -->
+   <!-- javaScript--------------------------------------- -->
+   <script src="portafolio.js" ></script>
+   <!-- --------------------------------------- -->
+   
 </body>
 </html>
