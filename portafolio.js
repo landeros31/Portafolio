@@ -4,8 +4,8 @@ const lista=document.querySelector('.container-list')
 
 function SendMail(params) {
 const from_name=document.getElementById('email')
-const to_name=document.getElementById('name').value
-const message=document.getElementById('message').value
+const to_name=document.getElementById('name')
+const message=document.getElementById('message')
   var tempParams={
      from_name,
      to_name,

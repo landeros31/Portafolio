@@ -91,7 +91,7 @@ flex-direction: column;
 }
 .description p{
   width: 80%;
-  font-size: 1.5vmax;
+  font-size: 2vmax;
   color: white;
 }
 .container-left{
@@ -103,17 +103,22 @@ align-items: flex-start;
 flex-direction: column;
 }
 .photo{
-  
-  width: 50%;
-  height: 65%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: 40%;
+  height: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 120px;
-  background-color: #FFFFFF;
-  border-radius: 114px;
+  border: 1px solid white;
+  border-radius: 60px;
   overflow: hidden;
 
+}
+.mfoto{
+  width: 100%;
+  height: 100%;
 }
 .ubicar-logo{
   display: flex;
@@ -184,7 +189,7 @@ flex-direction: column;
  display:none;
 }
 .contenedor-formacion p{
-font-size: 1.5vmax;
+font-size: 1.8vmax;
 color: white;
 }
 .contenedor-formacion2 p{
@@ -340,7 +345,8 @@ margin-left: 4%;
  
   width: 90%;
 }
-.button-proyect{
+
+.button-proyect {
 width: 45%;
 height: 40px;
 background: #0073E5;
@@ -371,6 +377,11 @@ border-radius: 20px;
 display: flex;
 justify-content: center;
 align-items: center;
+overflow: hidden;
+}
+.img-proyect1{
+  width: 100%;
+  height: 100%;
 }
 .container-proyect2{
   margin-top: 60px;
@@ -431,6 +442,10 @@ margin-left: 40px;
 }
 .container-form{
 width: 50%;
+display :flex ;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
 .container-form h4{
 color: white;
@@ -453,35 +468,19 @@ margin-left: 40px;
   
   
  }
- .names{
-   width: 100%;
-   border-radius: none;
-   display: flex;
-   justify-content: center;
-   align-items: flex-start;
-   width: 50%;
- }
+ 
  #name{
-   text-align: start;
-  width: 20vw;
+  text-align: start;
+  width: 42vw;
   height: 8vh;
-  background: #0D0D0D;
+  background:#0D0D0D;
   border-radius: 20px;
   color: white;
   font-size: 1.5vmax;
   margin-right: 20px;
-  padding-left: 5px;
+  margin-left: 40px;
  }
- #last-name{
-  text-align: start;
- width: 20vw;
- height: 8vh;
- background: #0D0D0D;
- border-radius: 20px;
- color: white;
- font-size: 1.5vmax;
- padding-left: 5px;
-}
+
 #email{
   margin-top: 10px;
   text-align: start;
@@ -492,6 +491,7 @@ margin-left: 40px;
  color: white;
  font-size: 1.5vmax;
  padding-left: 5px;
+ margin-left: 40px;
 }
 #message{
   margin-top: 10px;
@@ -503,6 +503,7 @@ margin-left: 40px;
  color: white;
  font-size: 1.5vmax;
  padding-left: 5px;
+ margin-left: 40px;
 }
 #enviar{
   margin-top: 10px;
@@ -511,6 +512,43 @@ margin-left: 40px;
  color:#0073E5;
  font-size: 2vmax;
  margin-right: 65%;
+}
+.botones{
+  display: flex ;
+  justify-content:center;
+  
+}
+ #enviars{
+  margin-top: 10px;
+  text-align: start;
+  background-color: black;
+ color:#0073E5;
+ font-size: 2vmax;
+ margin-left: 100px;
+ margin-right:65px;
+}
+footer{
+  background-color: #0D0D0D;
+  width: 100vw;
+  height: 18vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.logosf{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0073E5;
+}
+.logofoo{
+font-size: 40px;
+margin-right: 30px;
+}
+.pfoo{
+  color: white;
+  font-size: 20px;
 }
 /*/////////////////////Responsive/////////////////////////////////*/
 @media(max-width:692px){
@@ -545,7 +583,7 @@ margin-left: 40px;
     flex-direction: column;
  
     margin-top: 50px;
-    margin-right: 200px;
+    margin-right: 100px;
     width: 100%;
     height: auto;
     justify-content: center;
@@ -628,10 +666,12 @@ margin-left: 40px;
   .photo{
     margin-right: 90px;
     width: 40%;
-    height: 65%;
+    height: 70%;
+    margin-bottom: 40px;
   }
   .location{
-    margin-top: 20px;
+    
+    margin-bottom: 50px;
     margin-right: 100px;
   }
   .ubicar-logo p{
@@ -653,6 +693,7 @@ margin-left: 40px;
   .container-left-about{
     width: 100%;
     height: 100%;
+    
   }
 
   .studies h2{
@@ -785,34 +826,37 @@ margin-left: 40px;
    
     width: 90%;
     height: 55vh;
-    
+   
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-.container-information-proyect h3{
-  position: relative;
-  font-size: 3vmax;
-  bottom:470px ;
   
-  width: 30%;
+.container-information-proyect h3{
+  
+  
+  font-size: 3vmax;
+  width: 40%;
   
   
 }
 .description-proyect{
+ 
   position: relative;
-  bottom: 100px;
+  bottom: 50px;
+  margin-bottom: 10px;
   
    
 }
 .container-information-proyect p{
   font-size: 3vmax;
-}
+  }
 .container-information-proyect a{
   font-size: 2.5vmax;
 }
 .show-proyect{
+  
   position: relative;
   bottom: 120px;
   display: flex;
@@ -842,10 +886,11 @@ margin-bottom: 30px;
   text-align: center;
   
 }
+
 .container-information-proyect2 h3{
-  position: relative;
+  
   font-size: 3vmax;
-  bottom:470px ;
+  
   
   width: 30%;
   
@@ -887,14 +932,7 @@ margin-bottom: 30px;
   width:80%;
   }
   
-  .names{
-    width: 100%;
-    border-radius: none;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 50%;
-  }
+  
   #name{
     text-align: start;
    width: 40vw;
@@ -904,16 +942,7 @@ margin-bottom: 30px;
    font-size: 2vmax;
   
   }
-  #last-name{
-   text-align: start;
-  width: 40vw;
-  height: 5vh;
-  background: #0D0D0D;
-  border-radius: 10px;
- 
-  font-size: 2vmax;
-  padding-left: 5px;
- }
+  
  #email{
    margin-top: 10px;
    text-align: start;
@@ -943,5 +972,105 @@ margin-bottom: 30px;
   font-size: 3vmax;
   margin-right: 50%;
  }
+ .logofoo{
+  font-size: 30px;
+  margin-right: 30px;
+  }
+  .pfoo{
+    color: white;
+    font-size: 15px;
+  }
   /*///////////////////// final de seccion4/////////////////////////////////*/
+}
+@media(max-width:365px){
+  
+  .photo{
+    
+    width: 60%;
+    height: 65%;
+  }
+  .location{
+    margin-bottom: 40px;
+  }
+
+.container-left-about{
+  
+margin-top: 130px;
+}
+.education{
+  margin-bottom: 40px;
+}
+#laravel{
+  position: relative;
+  left: 200px;
+  bottom: 130px;
+}
+#python{
+  padding-left: 60px;
+}
+#java{
+  padding-left: 100px;
+}
+#react{
+  padding-left: 100px;
+  top: -110px;
+}
+#angular{
+
+  top: -210px;
+  left: 10px;
+}
+.container-tittle-skills h2{
+font-size: 5vmax;
+}
+/*
+.container-information-proyect h3{
+  
+  position: relative;
+  top: -440px;
+  width: 130px;
+  text-align: center;
+}
+.container-information-proyect2 h3{
+  
+  position: relative;
+  top: -440px;
+  width: 130px;
+  text-align: center;
+}*/
+.tittle-contact {
+  margin-top:-180px;
+}
+
+.logofoo{
+  font-size: 20px;
+  margin-right: 30px;
+  }
+  .pfoo{
+    color: white;
+    font-size: 10px;
+  }
+  .ul-list{
+    display:flex;
+    flex-direction: column;
+
+    margin-top: 50px;
+    margin-right: 50px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    margin-bottom: 120px;
+    
+    
+    
+  }
+
+}
+@media(max-width:385px){
+
+  .location{
+    margin-bottom: 50px;
+  }
 }

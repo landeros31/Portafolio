@@ -7,11 +7,28 @@
   <link rel="stylesheet" href="./Assets/style.css">
   <script src="https://kit.fontawesome.com/513d879ab2.js" crossorigin="anonymous"></script>
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script type="text/javascript">
-  (function() {
-  emailjs.init("user_vv2nfwISGznC1cG9CGmPl");
-  })();
+      (function() {
+          // https://dashboard.emailjs.com/admin/integration
+          emailjs.init('user_vv2nfwISGznC1cG9CGmPl');
+      })();
+  </script>
+  <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // generate a five digit number for the contact_number variable
+              this.contact_number.value = Math.random() * 100000 | 0;
+              // these IDs from the previous steps
+              emailjs.sendForm('service_zhsvg4f', 'template_q3c2kpl', this)
+                  .then(function() {
+                      console.log('SUCCESS!');
+                  }, function(error) {
+                      console.log('FAILED...', error);
+                  });
+          });
+      }
   </script>
 
   <title>Sebastian Landeros</title>
@@ -23,13 +40,14 @@
      <img class="img-logo"src="./Assets/img/Component 2.png" alt="logo"></div>
    <button class=hamburguer><i class="fas fa-bars"></i></button>
    
+   
 
    <nav class="container-list">
      <ul class="ul-list" id="ul-list">
        <li id="list"><a href="#inicio">INICIO</a></li>
        <li id="list"><a href="#about">SOBRE MI</a></li>
-       <li id="list"><a href="#">PROYECTOS</a></li>
-       <li id="list"><a href="#">CONTACTO</a></li>
+       <li id="list"><a href="#my-proyects">PROYECTOS</a></li>
+       <li id="list"><a href="#contact">CONTACTO</a></li>
      </ul>
    </nav>
   </header>
@@ -41,32 +59,39 @@
           <h1>Sebastian Landeros</h1>
        </div>
        <div class="description" >
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse expedita inventore porro assumenda dolorem atque quae minus dolores, doloremque excepturi blanditiis odio iure asperiores maiores maxime, incidunt in, fuga soluta?</p>
+           <p>Ingeniero Mecatonico y Desarrollador Full Stack, Creativo, Emprendedor y comprometido con el continuo desarrollo profesional, para estar a la vanguardia de los cambios científicos y Tecnológicos.
+
+           </p>
        </div>
     </div>
     <div class="container-left">
         <div class="photo">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/000/554/339/small/sunglasses_006.jpg" alt="mi-foto">
+            <img class="mfoto" src="./Assets/img/IMG_20200704_141644.jpg" alt="mi-foto">
         </div>
         <div class="location">
             <div class="ubicar-logo">
-              <div class="logo-location">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
+              <a href="https://www.google.com/maps/vt/data=TJYv4aPyB37R27pdk_wS6qZ65OD3PaiIlOtsKnwzCkP3cMUwq9__Iu05IqTF3N2BSWv5gnJ_e7UX08dwzlODm0R-ONpE2INGwxgWdYae24idc63i9mtZSJuvt4YGC1q_GgXvVrxgf9eFIFWBlin7g4U6vVvRK7ZNIUZM1Frhsq8Npzbtg4uYRShCMM64FL_SaX2vi197vB_AhkwYHoVp1xRs7dg0cJA0DbkMQOJuLpI8aUFFT4dL">
+              <div  class="logo-location">
+                <i  class="fas fa-map-marker-alt"></i>
+              </div></a>
               <p>Bogota.Colombia</p>
             </div>
 
             <div class="ubicar-logo">
+              <a href="https://www.linkedin.com/in/sebastian-landeros-b976341a1/">
               <div class="logo-location">
                 <i class="fab fa-linkedin"></i>
               </div>
+            </a>
               <p>Sebastian Landeros</p>
             </div>
 
             <div class="ubicar-logo">
+              <a href="https://github.com/landeros31">
               <div class="logo-location">
                 <i class="fab fa-github-square"></i>
               </div>
+            </a>
               <p>landeros31</p>
             </div>
 
@@ -107,26 +132,26 @@
           </div>
 
           <div class="contenedor-formacion2">
-            <p>Educamas-Programate . Bogota Colombia </p>
+            <p>Unjiversidad ECCI . Bogota Colombia </p>
             <div class="ubicar-logo-calendar">
              <div class="logo-calendar">
               <i class="far fa-calendar-alt"></i>
              </div>
-             <p>2021</p>
+             <p>2017</p>
             </div>
-            <p>Desarrollador Full Stack</p> 
+            <p>Tecnologo en Automaatizacion y Robotica Industrial</p> 
 
           </div>
 
           <div class="contenedor-formacion2">
-            <p>Educamas-Programate . Bogota Colombia </p>
+            <p>Universidad Distrital . Bogota Colombia </p>
             <div class="ubicar-logo-calendar">
              <div class="logo-calendar">
               <i class="far fa-calendar-alt"></i>
              </div>
              <p>2021</p>
             </div>
-            <p>Desarrollador Full Stack</p> 
+            <p>Capacitacion practica de desarrolo Web</p> 
 
           </div>
 
@@ -169,33 +194,36 @@
 <!------ -----cuadro usado para agregar  proyecto1--------------------- -->
       <div class="container-proyect">
           <div class=container-information-proyect>
-            <h3>TITULO AQUI</h3>
-            <p class="description-proyect">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, lorem ut enim nec, sed eu sapien natoque quis. Purus faucibus tellus placerat feugiat. Arcu, urna facilisis felis, id est, ut sed nisi. Eu, sed erat mollis risus ac donec.</p>
+            <h3>Tributo Nikola Tesla</h3>
+            <p class="description-proyect"> Pagina Web Tributo para nikola tesla quien fue un inventor, ingeniero eléctrico y mecánico serbio nacionalizado estadounidense.1​2​3​ Se le conoce sobre todo por sus numerosas invenciones en el campo del electromagnetismo, desarrolladas a finales del siglo XIX y principios del siglo XX. </p>
             <div class="show-proyect">
-              <button class="button-proyect">VISUALIZAR</button>
-              <a href="">VER EN GITHUB</a>
+              
+              <button class="button-proyect">visualizar<a href="#"></a></button>
+              </a>
+              <a href="https://github.com/landeros31/web_tributo_Nikola_Tesla">VER EN GITHUB</a>
             </div>
           </div>
           <div class="container-right-proyect">
             <div class="container-img-proyect">
-                    <img src="" alt="proyect1">
+                    <img class="img-proyect1" src="./Assets/img/Untitled video - Screen Recording - 6_8_2021, 8_50_14 p. m. (online-video-cutter.com).gif" alt="proyect1">
             </div>
           </div>
       </div>
 <!-- fin de cuadro que agrega proyecto --------------------------->
 <!-- cuadro usado para agregar proyecto 2---------------------- -->
             <div class="container-proyect2">
-              <div class=container-information-proyect2>
-                <h3>TITULO AQUI</h3>
-                <p class="description-proyect">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim, lorem ut enim nec, sed eu sapien natoque quis. Purus faucibus tellus placerat feugiat. Arcu, urna facilisis felis, id est, ut sed nisi. Eu, sed erat mollis risus ac donec.</p>
+              <div class=container-information-proyect>
+                <h3>BANKIDS</h3>
+                <p class="description-proyect"> Diseño de una aplicacion desktop y movil con el objetivo de que niños puedan manejar su dinero,ahorrar, enviar y recibir dinero a su gusto, primero deben vincular su acuenta a la de sus padres y esta les permitira un total acceso a la misma.</p>
                 <div class="show-proyect">
-                  <button class="button-proyect">VISUALIZAR</button>
-                  <a href="">VER EN GITHUB</a>
+                  
+                  <button  class="button-proyect">visualizar<a href="https://www.figma.com/file/wBviH9KnLDoaLbRuZebdUX/Bankids?node-id=0%3A1">v</button></a>
+                  <a href="https://www.figma.com/file/wBviH9KnLDoaLbRuZebdUX/Bankids?node-id=0%3A1">Ver en Figma</a>
                 </div>
               </div>
               <div class="container-right-proyect">
                 <div class="container-img-proyect">
-                        <img src="" alt="proyect1">
+                       <img class="img-proyect1" src="./Assets/img/bankids.PNG" alt="bankids">
                 </div>
               </div>
             </div>
@@ -208,22 +236,33 @@
         <h2 >Contacto</h2>
       </div>
       <div class= "container-form">
-        <h4>Lorem ipsum dolor sit amet, ijdnf consectetur adipiscing elit.?</h4>
-        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi pharetra, ac arcu, vivamus neque. Duis orci sem id risus pellenteempus, gravida urna velit dolor. Eget et sed diam molestie amet cras nam ultricies.</h5>
+        <h4>¿Deseas una pagina web dinamica?</h4>
+        <h5>Enviame in email con tus datos, informacion previa acerca de la pagina que deseas y me pondre en contacto contigo lo mas pronto posible para covertir tu vision de pagina web en realidad.</h5>
 
-        <form class="form" action="">
-          <div class="names">
-        <input type="text" name="name" " id="name" placeholder="Nombre" >
-        <input type="text" name="last name" id="last-name" placeholder="Apellido">
+        <form id="contact-form">
+          <input type="text" id="name" name="user_name" placeholder="nombre">
+          <input type="email" id="email" name="user_email" placeholder="email">
+          <textarea id="message" name="message" placeholder="mensaje"></textarea>
+          <div class="botones">
+          <input type="submit" id="enviars" value="Enviar">
+          <input type="reset" id="enviar" value="limpiar">
         </div>
-        <input type="email" name="email" id="email" placeholder="Correo electronico">
-        <input type="text" name="mensaje" id="message" placeholder="Mensaje">
-        
-        <input onclick="SendMail()" type="submit" value="enviar">
-        </form>
+      </form>
       </div>
 </section>
    <!-- fin de secccion 4--------------------------------------- -->
+
+   <footer>
+      <div class="logosf">
+       <a href="https://github.com/landeros31"> <div class="logofoo"><i class="fab fa-github-square"></i></div></a>
+       <a href="https://www.linkedin.com/in/sebastian-landeros-b976341a1/"><div class="logofoo"> <i class="fab fa-linkedin"></i></div></a>
+       <a href="#contact"><div class="logofoo"><i class="far fa-envelope"></i></div></a>
+      </div>
+      <div class="pfoo">
+        <p>Diseñado por Sebastian Landeros</p>
+        <p>Derechos-reservados</p>
+      </div>
+   </footer>
    <!-- javaScript--------------------------------------- -->
    <script src="portafolio.js" ></script>
    <!-- --------------------------------------- -->
